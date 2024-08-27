@@ -94,7 +94,7 @@ public function index($request): JsonResponse
             'per_page' => $request->input('per_page', 7)
         ];
 
-        $users = RequestTechnicalVisit::advancedSearch($params, true, function ($query) {
+        $users = TestModel::advancedSearch($params, paginate:true, function ($query) {
             return $query->with([
                 'relation1',
                 'relation1.relation2.relation3.relation4.relation5',
