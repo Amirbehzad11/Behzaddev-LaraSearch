@@ -2,10 +2,10 @@ How It Works
 
 use trait in model
 
-class RequestTechnicalVisit extends Model
-{
-    use HasFactory , Searchable;
+class TestModel extends Model
 
+    use HasFactory ,Searchable;
+	
     protected $fillable =[
         'technical_manager_id',
         'sabaf_code',
